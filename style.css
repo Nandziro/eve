@@ -245,3 +245,28 @@ body {
     opacity: 1;
     top: 0px;
 }
+.block__email {
+    display: flex;
+    justify-content: center;
+}
+.email__modal{
+    opacity: 0;
+    color: white;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background-color: rgb(89, 27, 5);
+    z-index: 1;
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-decoration-line: underline;
+    box-shadow:  0 0 10px rgb(148, 2, 2);
+    border-radius: 10px;
+}
+.email__modal.emailmodal {
+    opacity: 1;
+    top: 0px;
+}

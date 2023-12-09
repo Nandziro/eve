@@ -12,8 +12,12 @@ regButton.addEventListener('click',  function() {
     let telValue = myTel.value;
     let nameValue = myName.value;
 
-    if(emailValue.length < 5 && !emailValue.includes('@gmail.com')){
-        alert('Почта повинна мати символ @ та .')
+    if(emailValue.length < 5 && !emailValue.includes('@') && !emailValue.includes('.')){
+        let emailOkno = document.querySelector('.email__modal')
+        emailOkno.classList.add('emailmodal')
+        setTimeout(function(){
+            modalOkno.classList.remove('emailmodal')
+        },3000)
         return;
     }
     else if(passwordValue.length < 7){
@@ -21,7 +25,7 @@ regButton.addEventListener('click',  function() {
         modalOkno.classList.add('newmodal')
         setTimeout(function(){
             modalOkno.classList.remove('newmodal')
-        },4000)
+        },3000)
         return;
     }
     else if(nameValue.length === 0){
@@ -29,7 +33,7 @@ regButton.addEventListener('click',  function() {
         nickOkno.classList.add('nickmodal')
         setTimeout(function(){
             nickOkno.classList.remove('nickmodal')
-        },4000)
+        },3000)
         return;
     }
     else if(telValue.length !== 13 || !telValue.includes('+')){
@@ -37,7 +41,7 @@ regButton.addEventListener('click',  function() {
         telOkno.classList.add('telmodal')
         setTimeout(function(){
             telOkno.classList.remove('telmodal')
-        },4000)
+        },3000)
         return;
     }
     else if(!regCheckbox.checked){
@@ -45,7 +49,7 @@ regButton.addEventListener('click',  function() {
         acceptOkno.classList.add('acceptmodal')
         setTimeout(function(){
             acceptOkno.classList.remove('acceptmodal')
-        },4000)
+        },3000)
         return;
     }
     else{
